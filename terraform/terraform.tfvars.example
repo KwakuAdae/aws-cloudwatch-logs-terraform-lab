@@ -1,0 +1,9 @@
+# Copy to terraform.tfvars and edit:  cp terraform.tfvars.example terraform.tfvars
+aws_region                 = "us-east-1"
+project_name               = "cwlogs-lab"
+alert_email                = "you@example.com" # confirm the email AWS sends you
+log_retention_days         = 7
+schedule_enabled           = true
+error_rate                 = 0.05
+error_alarm_threshold      = 10
+latency_alarm_threshold_ms = 500

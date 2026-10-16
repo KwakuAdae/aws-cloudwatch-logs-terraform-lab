@@ -1,0 +1,8 @@
+# Parse Lambda's REPORT lines: duration, memory and cold starts (Init Duration)
+filter @type = "REPORT"
+| parse @message /Init Duration: (?<init_ms>[\d.]+) ms/
+| stats count(*) as invocations,
+        count(init_ms) as cold_starts,
+        avg(@duration) as avg_duration_ms,
+        max(@maxMemoryUsed / 1000 / 1000) as max_memory_mb
+  by bin(30m)

@@ -1,0 +1,3 @@
+# Order count and revenue in 5-minute buckets
+filter event = "order_placed" and ispresent(order_value)
+| stats count(*) as orders, sum(order_value) as revenue, avg(order_value) as avg_order by bin(5m)

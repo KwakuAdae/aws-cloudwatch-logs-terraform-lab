@@ -1,0 +1,9 @@
+# Latency percentiles per route (p50 = median, p95 = slowest 5%)
+filter ispresent(latency_ms)
+| stats count(*) as requests,
+        avg(latency_ms) as avg_ms,
+        pct(latency_ms, 50) as p50_ms,
+        pct(latency_ms, 95) as p95_ms,
+        max(latency_ms) as max_ms
+  by method, path
+| sort p95_ms desc

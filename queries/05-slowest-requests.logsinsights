@@ -1,0 +1,5 @@
+# The 10 slowest individual requests
+fields @timestamp, method, path, status, latency_ms, request_id
+| filter ispresent(latency_ms)
+| sort latency_ms desc
+| limit 10

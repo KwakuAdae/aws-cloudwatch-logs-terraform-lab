@@ -1,0 +1,3 @@
+# Requests per minute split by log level (switch to the Visualization tab for a chart)
+filter ispresent(level) and event != "batch_complete"
+| stats count(*) as requests by bin(1m), level

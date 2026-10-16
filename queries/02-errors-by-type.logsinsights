@@ -1,0 +1,4 @@
+# How many of each kind of error, most common first
+filter level = "ERROR"
+| stats count(*) as errors by error_type
+| sort errors desc

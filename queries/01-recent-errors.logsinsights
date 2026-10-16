@@ -1,0 +1,5 @@
+# The 20 most recent errors
+fields @timestamp, error_type, status, path, request_id, message
+| filter level = "ERROR"
+| sort @timestamp desc
+| limit 20

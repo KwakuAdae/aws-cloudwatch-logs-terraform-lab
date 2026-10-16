@@ -1,0 +1,4 @@
+# How many requests returned each HTTP status code
+filter ispresent(status)
+| stats count(*) as requests by status
+| sort status asc
