@@ -369,9 +369,9 @@ Running the lab for a day costs **a few cents**. Destroy it when you're done.
 - Add **contributor insights** rules for the top error-producing routes
 - Send logs from **EC2** using the CloudWatch agent
 - Encrypt the log groups with a customer-managed **KMS** key
-- Sister labs: [ECS Fargate](https://github.com/KwakuAdae/aws-ecr-ecs-fargate-lab) ·
-  [EKS](https://github.com/KwakuAdae/kwakuadae-aws-eks-website-lab) ·
-  [API Gateway](https://github.com/KwakuAdae/aws-api-gateway-lab) ·
+- Sister labs: [ECS Fargate](https://github.com/KwakuAdae/aws-ecs-fargate-website-lab) ·
+  [EKS](https://github.com/KwakuAdae/aws-eks-website-lab) ·
+  [API Gateway](https://github.com/KwakuAdae/aws-serverless-tasks-api-lab) ·
   [SQL with CloudFormation](https://github.com/KwakuAdae/aws-cloudformation-sql-lab)
 
 ## Troubleshooting
